@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #0a0a0a;
+  }
+}
+
+/* 171717 */
+.main-color {
+  color: #0a0a0a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:-webkit-autofill {
+  background-color: rgba(255, 255, 255, 0.05) !important; /* Match your design */
+  color: #ffffff !important; /* Keep text color white */
+  -webkit-text-fill-color: #ffffff !important; /* Force text color to white */
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: #4ade80 !important;
+}
+
+.z1 {
+  z-index: 2;
+}
+
+.loader-semi {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader-semi-black {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #000000;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 5px solid rgb(34 197 94);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
+
+.z6 {
+  z-index: 6;
+}
+
+.fadeup {
+  animation: fadeup 0.2s ease-in-out forwards;
+}
+
+/* Keyframes for fade-up animation */
+@keyframes fadeup {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
